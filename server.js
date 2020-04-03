@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-require("colors");
 const app = express();
 const morgan = require("morgan");
 const connectDB = require("./config/db");
@@ -17,7 +16,7 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 //Enable Cors for Public Access
-// app.use(cors());
+app.use(cors());
 
 //Dev logger
 if (process.env.NODE_ENV === "development") {
@@ -53,7 +52,7 @@ const server = app.listen(
 
 // Unhandled Promise Rejection Error
 process.on("unhandledRejection", (err, promise) => {
-  console.log(`Error: ${err.message}`.red);
+  console.log(`Error: ${err.message}`);
 
   // If error, stop server and exit
   server.close(() => process.exit(1));
