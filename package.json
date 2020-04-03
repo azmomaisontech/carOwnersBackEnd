@@ -1,0 +1,38 @@
+{
+  "name": "carowners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "client": "npm start --prefix client",
+    "both": "concurrently 'npm run dev' 'npm run client' ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "12.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azmomaisontech/carOwnersBackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azmomaisontech/carOwnersBackEnd/issues"
+  },
+  "homepage": "https://github.com/azmomaisontech/carOwnersBackEnd#readme",
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^5.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  }
+}

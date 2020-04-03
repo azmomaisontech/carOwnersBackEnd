@@ -1,0 +1,218 @@
+:root {
+  --text-color: hsl(200, 15%, 8%);
+  --gray: hsl(0, 0%, 52%);
+  --background: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --light-mode-box-shadow: #e1e1e1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.table {
+  height: 20px;
+  width: 2px;
+  background: #bdbcbb;
+}
+/* Loading Element */
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner-image {
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+
+/* NavBar */
+nav {
+  background: var(--white);
+}
+
+nav .logo {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text-color);
+}
+
+/* Home */
+main {
+  background: var(--background);
+  padding: 3rem 0;
+  min-height: 100vh;
+}
+
+main .filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin: 2rem 0;
+}
+
+main .filters a {
+  background: var(--white);
+  min-height: 200px;
+  border: 1px solid var(--light-mode-box-shadow);
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px var(--light-mode-box-shadow);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--text-color);
+  padding: 1rem 0;
+}
+
+main .filters .country span {
+  background: #bdbcbb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  margin: 0.5rem 1rem 0 0;
+}
+
+main .filters .color span {
+  background: #e0b0ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 1rem 0 0;
+  width: 10px;
+}
+
+header {
+  background: var(--background);
+  padding: 3rem 0;
+  min-height: 100vh;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+header .filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+header a {
+  color: var(--very-dark-blue-light-mode);
+  background: var(--white);
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px var(--light-mode-box-shadow);
+  border-radius: 5px;
+  max-width: 150px;
+  text-align: center;
+}
+
+header .cars {
+  background: var(--white);
+  min-height: 200px;
+  border: 1px solid var(--light-mode-box-shadow);
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px var(--light-mode-box-shadow);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+header .cars .car-image {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+header .cars img {
+  width: 50%;
+}
+
+header .cars .car-info {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+header .cars .car-info .car-name {
+  display: flex;
+}
+
+header .cars .car-info .brand {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5rem;
+}
+
+header .cars .car-info .year {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  border-right: 1px solid #bdbcbb;
+  border-left: 1px solid #bdbcbb;
+}
+
+header .cars .car-info .carcolor {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+}
+
+header .cars .car-info .owner-info {
+  display: flex;
+}
+
+header .cars .car-info .ownercountry {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5rem;
+}
+
+header .cars .car-info .gender {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+
+header .cars .car-info .job {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+}
+
+header .cars .color {
+  background: #e0b0ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  margin: auto;
+  height: 10px;
+  width: 10px;
+}
