@@ -3,7 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const app = express();
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 const carowners = require("./routes/carOwners");
@@ -19,9 +19,9 @@ connectDB();
 app.use(cors());
 
 //Dev logger
-if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
+// if (process.env.NODE_ENV === "development") {
+//   app.use(morgan("dev"));
+// }
 
 //Mount routers
 app.use("/api/v1/carowners", carowners);
