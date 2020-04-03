@@ -73,6 +73,7 @@ main .filters {
 main .filters a {
   background: var(--white);
   min-height: 200px;
+  width: 100%;
   border: 1px solid var(--light-mode-box-shadow);
   border-radius: 10px;
   box-shadow: 1px 1px 1px var(--light-mode-box-shadow);
@@ -82,7 +83,7 @@ main .filters a {
   align-items: center;
   justify-content: space-around;
   color: var(--text-color);
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 main .filters .country span {
@@ -100,6 +101,7 @@ main .filters .color span {
   width: 10px;
 }
 
+/* Car Owners */
 header {
   background: var(--background);
   padding: 3rem 0;
@@ -160,6 +162,7 @@ header .cars img {
 header .cars .car-info {
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
 }
 
 header .cars .car-info .car-name {
@@ -215,4 +218,48 @@ header .cars .color {
   margin: auto;
   height: 10px;
   width: 10px;
+}
+
+@media (max-width: 900px) {
+  .spinner-image {
+    width: 150px;
+  }
+
+  main .filters a {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 2rem;
+  }
+
+  main .filters .country {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  main .filters .color {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  main .filters .color span {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  header .cars {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  header .cars .car-image {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+  }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
 import PropTypes from "prop-types";
 
 const FilterItem = ({ filter }) => {
@@ -23,14 +25,20 @@ const FilterItem = ({ filter }) => {
         {filter.country.length === 0
           ? "All Countries"
           : filter.country &&
-            filter.country.map(country => <span>{country}</span>)}
+            filter.country.map(country => (
+              <span key={uuidv4()}>{country}</span>
+            ))}
       </div>
       <div className="color">
         {filter.car_color.length === 0
           ? "All Colors"
           : filter.car_color &&
             filter.car_color.map(backgroundColor => (
-              <span style={{ backgroundColor }} className="color"></span>
+              <span
+                key={uuidv4()}
+                style={{ backgroundColor }}
+                className="color"
+              ></span>
             ))}
       </div>
     </Link>
