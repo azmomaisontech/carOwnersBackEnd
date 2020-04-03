@@ -4,10 +4,11 @@ import queryString from "query-string";
 import Spinner from "../layouts/Spinner";
 import CarsContext from "../../context/Cars/carsContext";
 import CarItem from "../layouts/CarsItem";
+import Pagination from "../layouts/Pagination";
 
 const Cars = props => {
   const carsContext = useContext(CarsContext);
-  const { clearFilters, getCars, cars, loading } = carsContext;
+  const { clearFilters, getCars, cars, pagination, loading } = carsContext;
 
   useEffect(() => {
     const values = queryString.parse(props.location.search);
@@ -43,6 +44,7 @@ const Cars = props => {
         <div className="filters">
           {cars && cars.map(car => <CarItem key={car._id} car={car} />)}
         </div>
+        <Pagination pagination={pagination} id={props.match.params.id} />
       </div>
     </header>
   );

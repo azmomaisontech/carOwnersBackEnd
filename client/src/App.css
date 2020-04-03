@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .table {
   height: 20px;
   width: 2px;
@@ -218,6 +222,19 @@ header .cars .color {
   margin: auto;
   height: 10px;
   width: 10px;
+}
+
+#pagination {
+  background: none;
+  margin: 1rem 0;
+}
+
+#pagination ul {
+  display: flex;
+}
+
+#pagination ul li {
+  margin-right: 1rem;
 }
 
 @media (max-width: 900px) {

@@ -74,6 +74,7 @@ const CarsState = props => {
         cars: state.cars,
         filters: state.filters,
         loading: state.loading,
+        pagination: state.pagination,
         getCars,
         clearCars,
         getFilters,
